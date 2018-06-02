@@ -264,3 +264,4 @@ __pycache__/
 /smPhoneToolKit/smPhoneToolKit/Logic/adb.cs
 /smPhoneToolKit/smPhoneToolKit/Models/Enums/Status.cs
 /smPhoneToolKit/smPhoneToolKit/Models/Enums/ADBCommands.cs
+/smPhoneToolKit/smPhoneToolKit/Models/Smartphone.cs
