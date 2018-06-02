@@ -76,6 +76,7 @@
     <Compile Include="ViewModels\Helper\RelayCommand.cs" />
     <Compile Include="ViewModels\Models\SmartphoneViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Compile Include="ViewModels\Views\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -107,9 +108,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="adb\adb.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
