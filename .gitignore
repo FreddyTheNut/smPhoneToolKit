@@ -262,3 +262,5 @@ __pycache__/
 /smPhoneToolKit/smPhoneToolKit/ViewModels/Helper/RelayCommand.cs
 /smPhoneToolKit/smPhoneToolKit/ViewModels/Helper/NotifyPropertyChanged.cs
 /smPhoneToolKit/smPhoneToolKit/Logic/adb.cs
+/smPhoneToolKit/smPhoneToolKit/Models/Enums/Status.cs
+/smPhoneToolKit/smPhoneToolKit/Models/Enums/ADBCommands.cs

@@ -65,7 +65,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Logic\ADB.cs" />
+    <Compile Include="Models\Enums\ADBCommands.cs" />
+    <Compile Include="Models\Enums\Status.cs" />
+    <Compile Include="Models\Logic\ADB.cs" />
     <Compile Include="ViewModels\Helper\NotifyPropertyChanged.cs" />
     <Compile Include="ViewModels\Helper\RelayCommand.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
@@ -99,9 +101,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="adb\adb.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
