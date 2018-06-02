@@ -10,12 +10,20 @@ namespace smPhoneToolKit.ViewModels
     public sealed class ViewModelLocator
     {
         private static readonly MainWindowViewModel mainWindow = new MainWindowViewModel();
-
         public static MainWindowViewModel MainWindow
         {
             get
             {
                 return ViewModelLocator.mainWindow;
+            }
+        }
+
+        private static readonly InfoPageViewModel infoPage = new InfoPageViewModel();
+        public static InfoPageViewModel InfoPage
+        {
+            get
+            {
+                return ViewModelLocator.infoPage;
             }
         }
     }

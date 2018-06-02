@@ -8,6 +8,6 @@
         DataContext="{Binding MainWindow, Source={StaticResource ViewModelLocator}}"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Frame Source="/Views/InfoPage.xaml"></Frame>
     </Grid>
 </Window>
