@@ -261,3 +261,4 @@ __pycache__/
 *.pyc
 /smPhoneToolKit/smPhoneToolKit/ViewModels/Helper/RelayCommand.cs
 /smPhoneToolKit/smPhoneToolKit/ViewModels/Helper/NotifyPropertyChanged.cs
+/smPhoneToolKit/smPhoneToolKit/Logic/adb.cs
