@@ -65,6 +65,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\Dictionarys\ADBDictionary.cs" />
     <Compile Include="Models\Enums\ADBCommands.cs" />
     <Compile Include="Models\Enums\Status.cs" />
     <Compile Include="Models\Logic\ADB.cs" />
