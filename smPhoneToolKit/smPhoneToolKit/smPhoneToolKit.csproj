@@ -72,6 +72,7 @@
     <Compile Include="Models\Logic\ADB.cs" />
     <Compile Include="Models\Smartphone.cs" />
     <Compile Include="Models\Helper\NotifyPropertyChanged.cs" />
+    <Compile Include="Models\SmartphoneDetails.cs" />
     <Compile Include="ViewModels\Helper\RelayCommand.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

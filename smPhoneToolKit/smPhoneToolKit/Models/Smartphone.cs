@@ -12,6 +12,7 @@ namespace smPhoneToolKit.Models
     {
         private string bezeichnung;
         private Status status;
+        private SmartphoneDetails smartphoneDetails;
 
         public string Bezeichnung
         {
@@ -34,6 +35,19 @@ namespace smPhoneToolKit.Models
                 if(this.Status != value)
                 {
                     this.status = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public SmartphoneDetails SmartphoneDetails
+        {
+            get { return this.smartphoneDetails; }
+            set
+            {
+                if (this.SmartphoneDetails != value)
+                {
+                    this.smartphoneDetails = value;
                     OnPropertyChanged();
                 }
             }
