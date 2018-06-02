@@ -75,6 +75,7 @@
     <Compile Include="Models\SmartphoneDetails.cs" />
     <Compile Include="ViewModels\Helper\RelayCommand.cs" />
     <Compile Include="ViewModels\Models\SmartphoneViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
