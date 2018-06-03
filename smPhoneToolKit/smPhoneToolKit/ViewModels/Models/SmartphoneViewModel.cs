@@ -13,7 +13,7 @@ namespace smPhoneToolKit.ViewModels.Models
     public class SmartphoneViewModel : NotifyPropertyChanged
     {
         private readonly Smartphone smartphone = new Smartphone();
-        private readonly SmartphoneDetailsViewModel smartphoneDetails = new SmartphoneDetailsViewModel();
+        public SmartphoneDetailsViewModel SmartphoneDetails { get; } = new SmartphoneDetailsViewModel();
 
         public SmartphoneViewModel()
         {
@@ -43,10 +43,6 @@ namespace smPhoneToolKit.ViewModels.Models
                     OnPropertyChanged();
                 }
             }
-        }
-        public SmartphoneDetailsViewModel SmartphoneDetails
-        {
-            get { return this.smartphoneDetails; }
         }
     }
 }

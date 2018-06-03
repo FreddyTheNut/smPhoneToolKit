@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:smPhoneToolKit"
         mc:Ignorable="d"
         DataContext="{Binding MainWindow, Source={StaticResource ViewModelLocator}}"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="1000">
     <Grid>
         <Frame Source="/Views/InfoPage.xaml"></Frame>
     </Grid>

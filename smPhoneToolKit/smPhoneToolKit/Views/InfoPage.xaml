@@ -5,41 +5,256 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:smPhoneToolKit.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="800"
+      d:DesignHeight="550" d:DesignWidth="1000"
       DataContext="{Binding InfoPage, Source={StaticResource ViewModelLocator}}"
+      Background="LightGray"
       Title="InfoPage">
 
-    <ListView Background="LightGray">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="{x:Type GroupBox}">
+                <Setter Property="Margin" Value="8"/>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="HeaderTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" FontWeight="Bold" FontSize="20"/>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Grid.Column" Value="0"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="Grid.Column" Value="1"/>
+                <Setter Property="Height" Value="22"/>
+                <Setter Property="Margin" Value="5,8"/>
+            </Style>
+        </Grid.Resources>
 
-        <Label Content="{Binding Smartphone.SmartphoneDetails.Manufacturer}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.Brand}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.Model}"></Label>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
-        <Label Content="{Binding Smartphone.SmartphoneDetails.AndroidVersoin}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.ApiLevel}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.BuildNumber}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.BuildFingerprint}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.BuildId}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.BuildDate}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.SecurityPatch}"></Label>
 
-        <Label Content="{Binding Smartphone.SmartphoneDetails.SerialNumber}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.HostName}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.BluetoothName}"></Label>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
 
-        <Label Content="{Binding Smartphone.SmartphoneDetails.CpuModel}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.CpuISA}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.Cores}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.Gpu}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.Ram}"></Label>
+            <GroupBox Header="General" VerticalAlignment="Top" Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-        <Label Content="{Binding Smartphone.SmartphoneDetails.Memory}"></Label>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
 
-        <Label Content="{Binding Smartphone.SmartphoneDetails.Resolution}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.PixelDensity}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.Size}"></Label>
+                    <Label Content="Manufacturer" Grid.Row="0"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Manufacturer}" Grid.Row="0"/>
 
-        <Label Content="{Binding Smartphone.SmartphoneDetails.Technologie}"></Label>
-        <Label Content="{Binding Smartphone.SmartphoneDetails.Capacity}"></Label>
-    </ListView>
+                    <Label Content="Brand" Grid.Row="1"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Brand}" Grid.Row="1"/>
+
+                    <Label Content="Model" Grid.Row="2"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Model}" Grid.Row="2"/>
+
+                    <Label Content="Device" Grid.Row="3"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Device}" Grid.Row="3"/>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Header="Hardware" VerticalAlignment="Bottom" Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Soc" Grid.Row="0"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Soc}" Grid.Row="0"/>
+
+                    <Label Content="CPU Model" Grid.Row="1"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.CpuModel}" Grid.Row="1"/>
+
+                    <Label Content="CPU ISA" Grid.Row="2"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.CpuISA}" Grid.Row="2"/>
+
+                    <Label Content="Cores" Grid.Row="3"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Cores}" Grid.Row="3"/>
+
+                    <Label Content="GPU" Grid.Row="4"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Gpu}" Grid.Row="4"/>
+
+                    <Label Content="RAM" Grid.Row="5"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Ram}" Grid.Row="5"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <GroupBox Header="System" VerticalAlignment="Top" Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="OS" Grid.Row="0"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Os}" Grid.Row="0"/>
+
+                    <Label Content="Android-Version" Grid.Row="1"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.AndroidVersoin}" Grid.Row="1"/>
+
+                    <Label Content="API Level" Grid.Row="2"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.ApiLevel}" Grid.Row="2"/>
+
+                    <Label Content="Build-Number" Grid.Row="3"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.BuildNumber}" Grid.Row="3"/>
+
+                    <Label Content="Build Fingerprint" Grid.Row="4"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.BuildFingerprint}" Grid.Row="4"/>
+
+                    <Label Content="Build-ID" Grid.Row="5"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.BuildId}" Grid.Row="5"/>
+
+                    <Label Content="Build-Date" Grid.Row="6"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.BuildDate}" Grid.Row="6"/>
+
+                    <Label Content="Security Patch" Grid.Row="7"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.SecurityPatch}" Grid.Row="7"/>
+                </Grid>
+            </GroupBox>
+            
+            <GroupBox Header="Speicher" VerticalAlignment="Bottom" Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Memory" Grid.Row="0"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Memory}" Grid.Row="0"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+
+            <GroupBox Header="Display" VerticalAlignment="Top" Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Resolution" Grid.Row="0"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Resolution}" Grid.Row="0"/>
+
+                    <Label Content="Pixel Density" Grid.Row="1"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.PixelDensity}" Grid.Row="1"/>
+
+                    <Label Content="Size" Grid.Row="2"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Size}" Grid.Row="2"/>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Header="Akku" VerticalAlignment="Center" Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Technologie" Grid.Row="0"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Technologie}" Grid.Row="0"/>
+
+                    <Label Content="Pixel Capacity" Grid.Row="1"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.Capacity}" Grid.Row="1"/>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Header="Others" VerticalAlignment="Bottom" Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Serial Number" Grid.Row="0"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.SerialNumber}" Grid.Row="0"/>
+
+                    <Label Content="Host Name" Grid.Row="1"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.HostName}" Grid.Row="1"/>
+
+                    <Label Content="Bluetooth Name" Grid.Row="2"/>
+                    <TextBox Text="{Binding Smartphone.SmartphoneDetails.BluetoothName}" Grid.Row="2"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+    </Grid>
 </Page>
