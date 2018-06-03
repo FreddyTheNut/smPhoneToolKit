@@ -1,4 +1,5 @@
-﻿using smPhoneToolKit.Models;
+﻿using smPhoneToolKit.Logic;
+using smPhoneToolKit.Models;
 using smPhoneToolKit.Models.Enums;
 using smPhoneToolKit.ViewModels.Helper;
 using System;
@@ -12,6 +13,12 @@ namespace smPhoneToolKit.ViewModels.Models
     public class SmartphoneViewModel : NotifyPropertyChanged
     {
         private readonly Smartphone smartphone = new Smartphone();
+        private readonly SmartphoneDetailsViewModel smartphoneDetails = new SmartphoneDetailsViewModel();
+
+        public SmartphoneViewModel()
+        {
+            this.SmartphoneDetails.LoadSmartphoneDetails();
+        }
 
         public string Bezeichnung
         {
@@ -25,7 +32,6 @@ namespace smPhoneToolKit.ViewModels.Models
                 }
             }
         }
-
         public Status Status
         {
             get { return this.smartphone.Status; }
@@ -38,18 +44,9 @@ namespace smPhoneToolKit.ViewModels.Models
                 }
             }
         }
-
-        public SmartphoneDetails SmartphoneDetails
+        public SmartphoneDetailsViewModel SmartphoneDetails
         {
-            get { return this.smartphone.SmartphoneDetails; }
-            set
-            {
-                if (this.SmartphoneDetails != value)
-                {
-                    this.smartphone.SmartphoneDetails = value;
-                    OnPropertyChanged();
-                }
-            }
+            get { return this.smartphoneDetails; }
         }
     }
 }

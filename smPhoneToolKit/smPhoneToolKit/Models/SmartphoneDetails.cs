@@ -33,7 +33,7 @@ namespace smPhoneToolKit.Models
         string memory;
         //Display
         string resolution;
-        string prixelDensity;
+        string pixelDensity;
         string size;
         //Battery 
         string technologie;
@@ -63,7 +63,7 @@ namespace smPhoneToolKit.Models
         public string SecurityPatch { get => securityPatch; set => securityPatch = value; }
         public string Memory { get => memory; set => memory = value; }
         public string Resolution { get => resolution; set => resolution = value; }
-        public string PrixelDensity { get => prixelDensity; set => prixelDensity = value; }
+        public string PixelDensity { get => pixelDensity; set => pixelDensity = value; }
         public string Size { get => size; set => size = value; }
         public string Technologie { get => technologie; set => technologie = value; }
         public string Capacity { get => capacity; set => capacity = value; }

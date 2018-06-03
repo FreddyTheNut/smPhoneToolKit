@@ -5,11 +5,41 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:smPhoneToolKit.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="800"
       DataContext="{Binding InfoPage, Source={StaticResource ViewModelLocator}}"
       Title="InfoPage">
 
-    <StackPanel Background="LightGray">
+    <ListView Background="LightGray">
 
-    </StackPanel>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.Manufacturer}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.Brand}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.Model}"></Label>
+
+        <Label Content="{Binding Smartphone.SmartphoneDetails.AndroidVersoin}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.ApiLevel}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.BuildNumber}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.BuildFingerprint}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.BuildId}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.BuildDate}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.SecurityPatch}"></Label>
+
+        <Label Content="{Binding Smartphone.SmartphoneDetails.SerialNumber}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.HostName}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.BluetoothName}"></Label>
+
+        <Label Content="{Binding Smartphone.SmartphoneDetails.CpuModel}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.CpuISA}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.Cores}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.Gpu}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.Ram}"></Label>
+
+        <Label Content="{Binding Smartphone.SmartphoneDetails.Memory}"></Label>
+
+        <Label Content="{Binding Smartphone.SmartphoneDetails.Resolution}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.PixelDensity}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.Size}"></Label>
+
+        <Label Content="{Binding Smartphone.SmartphoneDetails.Technologie}"></Label>
+        <Label Content="{Binding Smartphone.SmartphoneDetails.Capacity}"></Label>
+    </ListView>
 </Page>
