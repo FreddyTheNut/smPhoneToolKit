@@ -445,7 +445,7 @@ namespace smPhoneToolKit.ViewModels.Logic
 
         private string CheckOutput(string output)
         {
-            if(!String.IsNullOrWhiteSpace(output))
+            if(!String.IsNullOrWhiteSpace(output) && !output.StartsWith("error") && !output.Contains("device '(null)' not found"))
                 return output.Trim();
             else
                 return null;

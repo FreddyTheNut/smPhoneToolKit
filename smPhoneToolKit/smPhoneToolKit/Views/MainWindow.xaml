@@ -8,6 +8,26 @@
         DataContext="{Binding MainWindow, Source={StaticResource ViewModelLocator}}"
         Title="MainWindow" Height="550" Width="1000">
     <Grid>
-        <Frame Source="/Views/InfoPage.xaml"></Frame>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Frame Grid.Row="0" Grid.ColumnSpan="2" Source="/Views/Segments/StatusHeadLine.xaml"/>
+
+        <ListView Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Pages}" SelectedIndex="{Binding ActivePageIndex}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding Bezeichnung}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <Frame Grid.Row="1" Grid.Column="1" Source="{Binding ActivePageSource.Source}" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

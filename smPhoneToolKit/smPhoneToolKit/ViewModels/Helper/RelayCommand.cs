@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace smPhoneToolKit.ViewModels.Helper
 {
-    public class RelayCommand
+    public class RelayCommand : ICommand
     {
         private readonly Action<object> execute;
         private readonly Func<object, bool> canExecute;
